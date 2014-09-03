@@ -1,0 +1,52 @@
+<html>
+<head>
+<style>
+.painel {
+	width: 450px;
+	margin:0 auto;
+}
+.quadrado { 
+	width:200px;
+	height:200px;
+	float:left;
+	margin:10px;
+}
+
+.vermelho {
+	background-color: red;
+}
+.azul {
+	background-color: blue;
+}
+
+.verde {
+	background-color: green;
+}
+
+.claro {
+	opacity: 0.3;
+}
+</style>
+<script src="js/jquery-2.1.0.min.js" type="text/javascript"></script>
+
+<script>
+$(document).ready(function () {
+	$(".quadrado").click(function (e) {
+		var a = $(e.target).data('alfa');
+		alert(a);
+	});
+});
+</script>
+</head>
+<body>
+
+<div class="painel">
+<div class="quadrado vermelho" data-alfa='qwerty'></div>
+<div class="quadrado vermelho claro" data-alfa='yuiop'></div>
+<div class="quadrado verde"></div>
+<div class="quadrado verde claro"></div>
+<div class="quadrado azul"></div>
+<div class="quadrado azul claro"></div>
+</div>
+</body>
+</html>
